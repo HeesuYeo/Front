@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 10% 2fr 2fr 1fr 1fr;
+    font-size: 35px;
+    height: 800px;
+    width: 600px;
+    text-align: center;
+}
+
+#header {
+    background-color: navy;
+    color: white;
+    grid-column: 1 / 4;
+}
+
+#hero {
+    background-color: dodgerblue;
+    color: white;
+    grid-column: 1 / 4;
+}
+
+#menu {
+    background-color: crimson;
+    color: white;
+    grid-row: 3 / 6;
+}
+
+#main {
+    background-color: rgb(36, 44, 96);
+    color: white;
+    grid-column: 2 / 4;
+}
+
+#banner {
+    background-color: rgb(254, 207, 52);
+    grid-column: 2 / 4;
+}
+
+#extra {
+    background-color: darkturquoise;
+    grid-column: 2 / 3;
+}
+
+#image {
+    background-color: skyblue;
+    grid-column: 3 / 4;
+}

@@ -1,0 +1,50 @@
+div {
+    border: solid black 1px;
+}
+
+span {
+    border: solid black 1px;
+    display: block;
+}
+
+.red {
+    color: red;
+    background-color: black;
+}
+
+.important {
+    font-weight: bold;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+#ex01 > span {
+    background-color: blue;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    display: inline;
+}
+
+#ex02 > span {
+    background-color: orangered;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    display: block;
+}
+
+#ex03 > span {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    display: inline-block;
+}
+

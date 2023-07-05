@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_배열 다루기2.html</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        #q1 {
+            border: solid 1px black;
+            display: grid;
+            grid-template-columns: repeat(6 ,1fr);
+            text-align: center;
+            width: 800px;
+            font-family: 'Jua', sans-serif;
+        }
+
+        .element {
+            font-family: 'Hi Melody', cursive;
+            font-size: 20px;
+            background-color: rgb(230, 230, 255);
+            border: solid 1px black;
+            height: 50px;
+            padding-top: 12.5px;
+            box-shadow: inset 3px 3px 5px rgb(173, 173, 226), inset -3px -3px 5px rgb(173, 173, 226);
+        }
+        .category {
+            font-family: 'Hi Melody', cursive;
+            font-size: 22px;
+            background-color: rgb(185, 185, 226);
+            border: solid 1px black;
+            font-weight: bold;
+            height: 50px;
+            padding-top: 10px;
+            box-shadow: inset 3px 3px 5px rgb(129, 129, 209), inset -3px -3px 5px rgb(129, 129, 209);
+        }
+
+        #q2, #q3 {
+            border: solid 1px black;
+            display: grid;
+            grid-template-columns: repeat(3 ,1fr);
+            text-align: center;
+            width: 500px;
+        }
+
+        #q4 {
+            border: solid 1px black;
+            display: grid;
+            grid-template-columns: repeat(2 ,1fr);
+            text-align: center;
+            width: 350px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h3> 
+        (1) 학생 번호, 이름, 국/영/수 랜덤 점수, 급식 만족도를 가진 
+            학생 100명의 자바 스크립트 오브젝트 배열을 생성
+    </h3>
+
+    <div id="q1">
+        <div class="category">학생번호</div>
+        <div class="category">이름</div>
+        <div class="category">국어 점수</div>
+        <div class="category">영어 점수</div>
+        <div class="category">수학 점수</div>
+        <div class="category">급식 만족도</div>
+    </div>
+
+    <h3>
+        (2) 모든 학생들의 평균 점수들로 이루어진 배열을 생성
+    </h3>
+
+    <div id="q2">
+        <div class="category">학생번호</div>
+        <div class="category">이름</div>
+        <div class="category">평균 점수</div>
+    </div>
+
+    <h3>
+        (3) 수학 점수가 60점 이하인 학생들로만 이루어진 배열을 생성
+    </h3>
+
+    <div id="q3">
+        <div class="category">학생번호</div>
+        <div class="category">이름</div>
+        <div class="category">수학 점수</div>
+    </div>
+
+    <h3>
+        (4) 학생들의 급식 만족도의 평균을 구할 것
+    </h3>
+
+    <div id="q4">
+        <div class="category">급식 만족도</div>
+    </div>
+
+    <script>
+        function getRandomScore() {
+            return parseInt(Math.random() * 101);
+        }
+        const scores = [];
+
+        for (i = 0; i < 10; ++i) {
+            scores[i] = getRandomScore();
+        }
+
+        console.log(scores);
+
+        // forEach : 배열의 모든 값에 전달한 함수의 동작을 수행한다.
+
+        // * 자바스크립트는 함수를 변수에 저장할 수 있다.
+
+        const myFunc = function (value, index, array){ // 이렇게 선언할 때는 함수 이름 없어도 된다.
+            // console.log('이번에 처리해야 하는 값: ', value);
+            // console.log('현재 인덱스 : ', index);
+            // console.log('전체 배열: ', array);
+            console.log(`${index}번째 학생의 점수: ${value * 2}`);
+        }
+
+        // * 변수에 저장된 함수를 전달할 수 있다.
+        scores.forEach(myFunc);
+
+        // * 변수에 저장된 함수를 직접 실행할 수도 있다.
+        myFunc(3, 99, [1, 2, 3]);
+
+        // 배열.map() : map에 전달한 함수의 결과값들로
+        //             만들어진 새로운 배열을 생성한다.
+
+        const newMapArray = scores.map(function (value, index) {
+            return value * 2;
+        });
+
+        console.log(newMapArray);
+
+        // 연습1: scores 배열을 이용해 grades 배열을 생성해보세요
+        const grades = scores.map(function (score) {
+            let grade = 'F';
+
+            if (score >= 90) {
+                grade = 'A';
+            } else if (score >= 80) {
+                grade = 'B';
+            } else if (score >= 70) {
+                grade = 'C';
+            } else if (score >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            
+            return {
+                stu_score: score,
+                stu_grade: grade
+            };
+        });
+
+        console.log(grades);
+
+        console.log(grades[0].stu_score);
+        console.log(grades[0].stu_grade);
+
+        // 배열.filter() : 전달한 함수에서 true를 리턴한 값만 남기는 함수
+        const filteredStudents = grades.filter(function (value) {
+            return value.stu_grade === 'C' || value.stu_grade === 'D';
+        });
+
+        console.log('전체 학생: ', grades);
+        console.log('C 또는 D인 학생: ', filteredStudents);
+
+        // 배열.reduce() : 배열의 모든 값을 이용해 하나의 결과를 낼 수 있는 함수
+        console.log(scores);
+        
+        const smallestValue = scores.reduce(function (previousValue, currentValue, index) {
+            console.log(`[${index}번째 reduce]`);
+            console.log(`현재까지 가장 작은 값: ${previousValue}`);
+            console.log(`이번에 비교할 값: ${currentValue}`);   
+            return previousValue < currentValue ? previousValue : currentValue; 
+        });
+
+        console.log(smallestValue);
+
+        /*
+            (1) 학생 번호, 이름, 국/영/수 랜덤 점수, 급식 만족도를 가진 
+                학생 100명의 자바 스크립트 오브젝트 배열을 생성
+
+            (2) 모든 학생들의 평균 점수들로 이루어진 배열을 생성
+
+            (3) 수학 점수가 60점 이하인 학생들로만 이루어진 배열을 생성
+
+            (4) 학생들의 급식 만족도의 평균을 구할 것
+
+            (1), (2), (3)을 모두 html에 보기 좋게 출력할 것
+        */
+        
+        const lastNames = ['김', '이', '박', '최', '정', '강', '조', '윤', '장', '임', '한', '오', '서',
+                            '신', '권', '황', '안', '송', '전', '홍', '유', '고', '문', '양', '손', '배'];
+        const firstNames = ['민준', '서준', '도윤', '예준', '시우', '서연', '서윤', '지우', '서현', '하은',
+                            '하준', '주원', '지호', '지후', '준우', '준서', '건우', '도현', '현우', '지훈',
+                            '하윤', '민서', '지유', '윤서', '지민', '채원', '수아', '지아', '지윤', '은서'];
+
+        function getName() {
+            last = lastNames[parseInt(Math.random() * lastNames.length)]; 
+            first = firstNames[parseInt(Math.random() * firstNames.length)]; 
+            return last + first;
+        }
+
+        const names = [];
+
+        for(i = 0; i < 100; ++i) {
+            names.push(getName());
+        }
+        
+        function getStudentInfo(stu_num, name) {
+            kr_score = getRandomScore();
+            en_score = getRandomScore();
+            math_score = getRandomScore();
+            lunch_satisfaction = parseInt(Math.random() * 5 + 1);
+
+            return {
+                stu_num,name, kr_score, en_score, math_score, lunch_satisfaction
+            };
+        }
+
+        const students = [];
+
+        for (i = 0; i < 100; ++i) {
+            students.push(getStudentInfo(i + 1, names.sort()[i]));
+        }
+
+        console.log(students);
+
+        const avgScore = students.map(function (info) {
+            
+            return ((info.kr_score + info.en_score + info.math_score) / 3).toFixed(2);
+        });
+
+        console.log(avgScore);
+
+        const mathScoreFilter = students.filter(function (info) {
+            return info.math_score <= 60;
+        });
+        
+        console.log(mathScoreFilter);
+
+        lunchSatisfaction = [];
+        for(i = 0; i < students.length; ++i) {
+            lunchSatisfaction.push(students[i].lunch_satisfaction);
+        }
+        
+        const sumSatisfaction = lunchSatisfaction.reduce(function (v1, v2) {
+            return v1 + v2;
+        });
+
+        const avgSatisfaction = sumSatisfaction / 100;
+
+        console.log('급식 만족도 평균: ', avgSatisfaction);
+
+        const q1 = document.getElementById('q1');
+
+        for (i = 0; i < students.length; ++i) {
+            q1.innerHTML += '<div class=\'element\'>' + students[i].stu_num +'</div>';
+            q1.innerHTML += '<div class=\'element\'>' + students[i].name +'</div>';
+            q1.innerHTML += '<div class=\'element\'>' + students[i].kr_score +'</div>';
+            q1.innerHTML += '<div class=\'element\'>' + students[i].en_score +'</div>';
+            q1.innerHTML += '<div class=\'element\'>' + students[i].math_score +'</div>';
+            switch (students[i].lunch_satisfaction) {
+                case 1:
+                    q1.innerHTML += '<div class=\'element\'> ★ </div>';
+                    break;    
+                case 2:
+                    q1.innerHTML += '<div class=\'element\'> ★★ </div>';
+                    break;
+                case 3:
+                    q1.innerHTML += '<div class=\'element\'> ★★★ </div>';
+                    break;
+                case 4:
+                    q1.innerHTML += '<div class=\'element\'> ★★★★ </div>';
+                    break;
+                default:
+                    q1.innerHTML += '<div class=\'element\'> ★★★★★ </div>';
+                    break;
+            }
+            
+        }
+
+        const q2 = document.getElementById('q2');
+
+        for(i = 0; i < students.length; ++i) {
+            q2.innerHTML += '<div class=\'element\'>' + students[i].stu_num +'</div>';
+            q2.innerHTML += '<div class=\'element\'>' + students[i].name +'</div>';
+            q2.innerHTML += '<div class=\'element\'>' + avgScore[i] + '</div>';
+        }
+
+        const q3 = document.getElementById('q3');
+
+        for(i = 0; i < mathScoreFilter.length; ++i) {
+            q3.innerHTML += '<div class=\'element\'>' + mathScoreFilter[i].stu_num +'</div>';
+            q3.innerHTML += '<div class=\'element\'>' + mathScoreFilter[i].name +'</div>';
+            q3.innerHTML += '<div class=\'element\'>' + mathScoreFilter[i].math_score +'</div>';
+        }
+
+        const q4 = document.getElementById('q4');
+
+        q4.innerHTML += '<div class=\'element\'>' + avgSatisfaction +'</div>';
+
+    </script>
+
+</body>
+</html>

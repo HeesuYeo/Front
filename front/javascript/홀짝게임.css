@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    width: 800px;
+    height: 800px;
+    font-family: 'Sunflower', sans-serif;
+}
+
+#container > div {
+    border: solid black 1px;
+}
+
+#title {
+    background-color: rgb(222, 239, 255);
+    border: solid black 1px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#game {
+    background-color: rgb(237, 246, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 240px;
+
+}
+
+#game-panel {
+    grid-column: span 2;
+    font-size: 300px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+button {
+    border-radius: 15px;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 80px;
+    margin: 10px;
+}

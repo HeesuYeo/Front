@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    background: linear-gradient(to bottom right, rgb(197, 248, 213), white);
+}
+
+
+
+.mainhead {
+    width: 450px;
+    background: linear-gradient(to right,rgb(105, 191, 142), rgb(36, 138, 80));
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Franklin Gothic Heavy;
+    
+}
+
+.subhead {
+    font-family: Arial Black;
+    color: rgb(50, 171, 102);
+}
+
+td {
+    font-family: Arial;
+    font-size: 60px;
+}
+
+
+div {
+    font-family: Arial Black;
+    font-size: 40px;
+    border: solid 3px black;
+    border-radius: 15px;
+}
+
+.div1 {
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 300px;
+    position: relative;
+}
+
+.div2 {
+    background-color: rgb(65, 150, 78); 
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.div2 > div{
+    padding: 5px;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}

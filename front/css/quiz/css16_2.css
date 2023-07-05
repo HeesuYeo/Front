@@ -1,0 +1,111 @@
+* {
+    margin-left: 15px;
+    background-color: rgb(230, 207, 252);
+}
+
+.border {
+    margin-left: 0px;
+    width: 600px;
+    height: 700px;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: Candara Light;
+    margin-bottom: 5px;
+}
+
+.out {
+    float: left;
+}
+
+.container {
+    border: solid black 2px;
+    border-radius: 5px;
+    display: flex;
+    width: 230px;
+    height: 150px;
+    box-shadow: inset 10px 10px 5px rgb(88, 46, 129);
+    background-color: rgb(117, 73, 158);
+}
+
+.container > div {
+    border: solid black 2px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 45px;
+    box-shadow: inset 10px 10px 5px rgb(241, 159, 82);
+    background-color: rgb(240, 136, 39);
+}
+
+.container > span {
+    border: solid black 2px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 45px;
+    box-shadow: inset 10px 10px 5px rgb(241, 159, 82);
+    background-color: rgb(240, 136, 39);
+}
+
+.container > div:first-child {
+    height: 65px;
+}
+
+.container > div:nth-child(2) {
+    height: 85px;
+}
+
+.container > div:nth-child(3) {
+    height: 40px;
+}
+
+.container > div:last-child {
+    height: 60px;
+}
+
+#flex-start {
+    align-items: flex-start;
+}
+
+#flex-end {
+    align-items: flex-end;
+}
+
+#center {
+    align-items: center;
+}
+
+#stretch {
+    align-items: stretch;
+}
+
+#baseline {
+    width: 500px;
+    height: 130px;
+    text-align: center;
+    align-items: baseline;
+}
+
+#baseline > div {
+    padding-top: 15px;
+}
+
+#baseline > div:first-child, #baseline > div:last-child {
+    vertical-align: middle;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 110px;
+    height: 75px;
+}
+
+#baseline > div:nth-child(2){
+    font-size: 16px;
+    width: 110px;
+    height: 45px;
+}
+
+#baseline > div:nth-child(3){
+    font-size: 25px;
+    width: 140px;
+    height: 70px;
+}

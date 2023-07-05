@@ -1,0 +1,42 @@
+#out {
+    font-size: 50px;
+}
+
+#out > span:first-child {
+    color: red;
+}
+
+#out > span:last-child {
+    color: navy;
+}
+
+/* hover : 해당 요소에 마우스가 올라갔을 때만 선택 */
+#out > span:hover {
+    color: aquamarine;
+    font-size: 1.2em;
+}
+
+/* active : 해당 요소가 클릭되어 활성화된 상태의 스타일 */
+#out > span:active {
+    color: yellow;
+    font-size: 1.2em;
+}
+
+/* link : 해당 요소가 방문한 적 없는 상태인 링크일 때의 스타일 */
+a:link {
+    color: green;
+}
+
+/* visited : 해당 요소가 방문한 적 이는 상태인 링크일 때의 스타일 */
+a:visited {
+    color: green;
+}
+
+/* hover가 active보다 먼저 설정되어야한다. */
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: yellow;
+}

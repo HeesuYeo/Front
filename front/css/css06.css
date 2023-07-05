@@ -1,0 +1,65 @@
+* {
+    border: solid 1px green;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: solid 3px black;
+    padding: 3px;
+}
+
+#margin + ul > li:first-child {
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+#margin + ul > li:nth-child(2) {
+    padding: 5px 20px 15px 50px;
+    margin-top: 25px;
+}
+
+#margin + ul > li:nth-child(3) {
+    margin-left: 55px;
+}
+
+div {
+    border: solid 3px black;
+    height: 100px;
+    margin: auto;
+}
+
+div:first-of-type {
+    width: 500px;
+}
+
+div:nth-of-type(2){
+    width: 300px;
+}
+
+div:nth-of-type(3){
+    width: 150px;
+}
+
+#content-box {
+    box-sizing: content-box;
+}
+
+#border-box {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 500px;
+    height: 200px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: solid 25px black;
+    background-image: url('https://cdnweb01.wikitree.co.kr/webdata/editor/202104/13/img_20210413170803_58348a47.webp');
+    background-size: 200px auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}

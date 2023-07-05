@@ -1,0 +1,22 @@
+/* css파일은 style 태그가 자동으로 적용되어있다.*/
+
+dl > dt + dd:last-child {
+    color: orange;
+    font-size: 1.1rem;
+}
+
+#dt1 {
+    font-size: 11px; 
+    /* dt1d의 font-size는 inline CSS이므로 덮어써지지 않는다. */
+}
+
+#dt2 {
+    color: chartreuse;
+    background-color: black;
+}
+
+#dt3 {
+    color: blue;
+    font-size: 35px;
+    font-weight: bold;
+}

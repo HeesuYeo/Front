@@ -1,0 +1,37 @@
+html {
+    font-size: 15px; /* rem은 이 크기에 비례하여 크기를 조절한다. */
+}
+
+div {
+    border: solid 1px black;
+    margin-bottom: 10px;
+}
+
+/* [] : 괄호 내부의 속성이 존재하는 요소들에 대한 선택자 */
+/* [id$="m"] : id 속성이 m으로 끝나는 요소들을 선택 */
+[id$="m"] {
+    font-size: 25px;
+}
+
+#em {
+    width: 15em;
+}
+
+#rem {
+    width: 15rem;
+}
+
+/* [id^="v"] : id 속성이 v로 시작하는 요소들을 선택 */
+[id^="v"] {
+    font-size: 20px;
+}
+
+#vw {
+    width: 15vw;
+    height: 15vw;
+}
+
+#vh {
+    width: 15vh;
+    height: 15vh;
+}

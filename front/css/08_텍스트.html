@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_텍스트.html</title>
+    <link rel="stylesheet" href="./css08.css">
+</head>
+<body>
+    
+    <h3># text-align : 텍스트 정렬</h3>
+
+    <ul>
+        <!-- 가운데 정렬 -->
+        <li style="text-align: center;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <!-- 왼쪽 정렬 -->
+        <li style="text-align: left;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <!-- 오른쪽 정렬 -->
+        <li style="text-align: right;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <!-- 줄을 최대한 채우는 방식으로 정렬 -->
+        <li style="text-align: justify;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+    </ul>
+
+    <h3># vertical align : 줄 내부에서의 높이 설정</h3>
+
+    <!-- div  : 아무 의미 없이 영역을 지정할 때 사용하는 태그 (한 줄 전부 차지) -->
+    <!-- span : 아무 의미 없이 영역을 지정할 때 사용하는 태그 (블록 지정)-->
+    <ul style="font-size: 25px;">
+        <li>The quick 
+            <span style="vertical-align: top; font-size: 0.5em;">brown fox</span> 
+            jumps over a lazy dog. </li>
+        <li>The quick 
+            <span style="vertical-align: middle; font-size: 0.5em;">brown fox</span> 
+            jumps over a lazy dog. </li>
+        <li>The quick 
+            <span style="vertical-align: bottom; font-size: 0.5em;">brown fox</span> 
+            jumps over a lazy dog. </li>
+    </ul>
+
+    <h3># text-decoration : 글자에 줄 긋기</h3>
+
+    <ul style="font-size: 25px;">
+        <li style="text-decoration: solid 3px red underline;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="text-decoration: solid 3px red line-through;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="text-decoration: solid 3px red overline;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+    </ul>
+
+    <h3># letter-spacing : 글자 간격 설정</h3>
+
+    <ul style="font-size: 25px;">
+        <li style="letter-spacing: -5px;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="letter-spacing: 0px;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="letter-spacing: 5px;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="letter-spacing: 15px;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+        <li style="letter-spacing: 25px;">
+            The quick brown fox jumps over a lazy dog.
+        </li>
+    </ul>
+
+    <h3># line-height : 줄 간격 설정</h3>
+
+    <ul>
+        <li style="line-height: 5px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <li style="line-height: 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+
+        <li style="line-height: 25px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+    </ul>
+
+    <h3># word-spacing : 단어 간 간격 설정</h3>
+
+    <ul>
+        <li style="word-spacing: 5px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <li style="word-spacing: 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+
+        <li style="word-spacing: 25px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+    </ul>
+
+    <h3># text-indent : 문단 첫 줄 들여쓰기 설정</h3>
+
+    <ul>
+        <li style="text-indent: 1em; text-align: justify;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+    </ul>
+
+    <h3># white-space : 자동 줄 바꿈 설정</h3>
+
+    <ul>
+        <li style="white-space: nowrap;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+        <li style="white-space: normal;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent augue risus, vehicula ac laoreet sit amet, vestibulum non quam. Curabitur facilisis luctus nulla nec tristique. Donec hendrerit augue nisl, et aliquam dolor consequat nec. Nullam ullamcorper quam enim, sed aliquam leo feugiat ac. Vivamus volutpat fermentum ipsum eget varius. Nunc pulvinar ante eget justo suscipit aliquam. Vivamus dictum metus neque, sit amet porta ante ornare vestibulum. Vivamus vehicula, quam eu semper lobortis, leo massa feugiat quam, et cursus ante purus at lacus. Integer elementum ipsum metus. In ac sagittis metus. Donec ornare dignissim nibh, vestibulum scelerisque tortor viverra non. Nunc varius velit et augue porta, eget semper mauris dignissim. In tincidunt pellentesque venenatis. Nunc vitae finibus sapien. Phasellus viverra luctus mi, nec blandit justo commodo eget. Mauris auctor leo a commodo ultrices.
+        </li>
+    </ul>
+
+</body>
+</html>

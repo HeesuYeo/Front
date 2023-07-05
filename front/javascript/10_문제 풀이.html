@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_문제 풀이.html</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #all-students, #danger-students {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 5px;
+        }
+
+        #avg-students {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 5px;
+            width: 50%;
+        }
+
+        .danger {
+            color: red;
+            font-weight: bold;
+            text-decoration: red 1px double underline;
+        }
+
+        .header {
+            background-color: black;
+            color: white;
+        }
+
+        .data {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="all-students">
+        <div class="header">번호</div>
+        <div class="header">이름</div>
+        <div class="header">국어</div>
+        <div class="header">영어</div>
+        <div class="header">수학</div>
+        <div class="header">별점</div>
+    </div>
+
+    <div id="avg-students">
+        <div class="header">번호</div>
+        <div class="header">이름</div>
+        <div class="header">평균</div>
+    </div>
+
+    <div id="danger-students">
+        <div class="header">번호</div>
+        <div class="header">이름</div>
+        <div class="header">국어</div>
+        <div class="header">영어</div>
+        <div class="header">수학</div>
+        <div class="header">별점</div>
+    </div>
+
+    <script>
+        /*
+            (1) 학생 번호, 이름, 국/영/수 랜덤 점수, 급식 만족도를 가진 
+                학생 100명의 자바 스크립트 오브젝트 배열을 생성
+
+            (2) 모든 학생들의 평균 점수들로 이루어진 배열을 생성
+
+            (3) 수학 점수가 60점 이하인 학생들로만 이루어진 배열을 생성
+
+            (4) 학생들의 급식 만족도의 평균을 구할 것
+
+            (1), (2), (3)을 모두 html에 보기 좋게 출력할 것
+        */
+
+        let studentNumber = 1;
+        
+        const lastNames = ['김', '이', '박', '최', '정', '강', '조', '윤', '장', '임', '한', '오', '서',
+                            '신', '권', '황', '안', '송', '전', '홍', '유', '고', '문', '양', '손', '배'];
+        const firstNames = ['민준', '서준', '도윤', '예준', '시우', '서연', '서윤', '지우', '서현', '하은',
+                            '하준', '주원', '지호', '지후', '준우', '준서', '건우', '도현', '현우', '지훈',
+                            '하윤', '민서', '지유', '윤서', '지민', '채원', '수아', '지아', '지윤', '은서'];
+
+        const getRandomName = function () {
+            return lastNames[parseInt(lastNames.length * Math.random())]
+                + firstNames[parseInt(firstNames.length * Math.random())];
+        }
+
+        const getRandomScore = function () {
+            return parseInt(Math.random() * 101);
+        }
+
+        const getRandomStudent = function () {
+
+            return {
+                num: studentNumber++,
+                name: getRandomName(),
+                kor: getRandomScore(),
+                eng: getRandomScore(),
+                math: getRandomScore(),
+                star: parseInt(Math.random() * 5 + 1)
+            };
+        }
+
+        const students = [];
+
+        for (i = 0; i < 100; ++i) {
+            students.push(getRandomStudent());
+        }
+
+        const grid1 = document.getElementById('all-students');
+        
+        // Arrow Function
+        students.forEach((stu) => {
+            grid1.innerHTML += `<div class="data">${stu.num}</div>`;
+            grid1.innerHTML += `<div class="data">${stu.name}</div>`;
+            grid1.innerHTML += `<div class="data">${stu.kor}</div>`;
+            grid1.innerHTML += `<div class="data">${stu.eng}</div>`;
+            grid1.innerHTML += `<div class="data">${stu.math}</div>`;
+            grid1.innerHTML += `<div class="data">${stu.star}</div>`;
+        });
+        
+        
+        const studentsAvgs = students.map((stu) => {
+            return {
+                num : stu.num,
+                name: stu.name,
+                avg: (stu.kor + stu.eng + stu.math) / 3
+            }
+        });
+        
+        const grid2 = document.getElementById('avg-students');
+
+        studentsAvgs.forEach((stuAvg) => {
+            grid2.innerHTML += `<div class="data">${stuAvg.num}</div>`;
+            grid2.innerHTML += `<div class="data">${stuAvg.name}</div>`;
+            grid2.innerHTML += `<div class="data">${Math.round(stuAvg.avg)}</div>`;
+        });
+
+        const dangerStudents = students.filter((stu) => {
+            return stu.math <= 60;
+        });
+
+        const grid3 = document.getElementById('danger-students');
+
+        dangerStudents.forEach((dang) => {
+            grid3.innerHTML += `<div class="data">${dang.num}</div>`;
+            grid3.innerHTML += `<div class="data">${dang.name}</div>`;
+            grid3.innerHTML += `<div class="data">${dang.kor}</div>`;
+            grid3.innerHTML += `<div class="data">${dang.eng}</div>`;
+            grid3.innerHTML += `<div class="data danger">${dang.math}</div>`;
+            grid3.innerHTML += `<div class="data">${dang.star}</div>`;
+        });
+
+        // return만 하는 함수는 이렇게까지 줄일 수 있다.
+        const stars = students.map ((stu) => stu.star);
+
+        const total = stars.reduce((sum, curr) => sum + curr);
+
+        console.log('평균 별점: ', total / stars.length);
+
+    </script>
+
+</body>
+</html>

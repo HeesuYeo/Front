@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_Selector.html</title>
+    <link rel="stylesheet" href="./css03.css">
+</head>
+<body>
+    
+    <table>
+        <h1 class="mainhead" style="font-size: 100px;">CSS</h>
+        <h1 class="mainhead" style="font-size: 80px;">Selectors</h>
+        <tr>
+            <td rowspan="2">
+                <div class="div1">
+                    a
+                    <div class="div2">
+                     b
+                     <div class="div3" style="background-color: white; color: black;">c</div>
+                    </div>
+                </div>
+            </td>
+            <td class="subhead">a > b &nbsp;Child Combinator</td>
+        </tr>
+        <tr>
+            <td class="explain">
+                Select all <i>b</i> elements that are <br>
+                directly inside of <i>a</i> elements.
+            </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                <div class="div1">
+                    a
+                    <div class="div2">
+                     b   
+                     <div class="div3">b</div>
+                    </div>
+                </div>
+            </td>
+            <td class="subhead">a&nbsp;&nbsp;b &nbsp;&nbsp;&nbsp;Descendent Combinator</td>
+        </tr>
+        <tr>
+            <td class="explain">
+                Select all <i>b</i> elements that are <br>
+                anywhere inside of <i>a</i> elements.
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
