@@ -1,2 +1,4 @@
-# Front-Study
-HTML, CSS, JavaScript 공부한 내용들
+## :pushpin: Front
+
+HTML, CSS, JS  Studying
+
